@@ -3,13 +3,14 @@ use Rack::Static,
   :root => "app"
 
 run lambda { |env|
+  req = Rack::Request.new(env)
   [
     200, 
     {
       'Content-Type'  => 'text/html', 
       'Cache-Control' => 'public, max-age=86400' 
     },
-    File.open('app/index.html', File::RDONLY)
+    req.path =~ /^\/sobre\.html/ ? File.open('app/sobre.html', File::RDONLY) : File.open('app/index.html', File::RDONLY)
   ]
 }
 
