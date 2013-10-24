@@ -1,2 +1,6 @@
-/logs
-/Session.vim
+logs/*
+!.gitkeep
+.gitignore
+*.swp
+*.swo
+Session.vim
