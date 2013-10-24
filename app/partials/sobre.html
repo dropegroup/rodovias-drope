@@ -1,0 +1,17 @@
+Estado:
+<select ng-model="estado" ng-options="e.sigla for e in estados" ng-change="drawMap(estado.sigla, ano.numero, mes.numero)">
+  <option value="">TODOS</option>
+</select>
+
+Ano:
+<select ng-model="ano" ng-options="a.numero for a in anos" ng-change="drawMap(estado.sigla, ano.numero, mes.numero)">
+  <option value="">TODOS</option>
+</select>
+
+Mês:
+<select ng-model="mes" ng-options="m.nome for m in meses" ng-change="drawMap(estado.sigla, ano.numero, mes.numero)">
+  <option value="">TODOS</option>
+</select>
+
+<div id="map_canvas" style="width: 900px; height: 600px;"></div>
+

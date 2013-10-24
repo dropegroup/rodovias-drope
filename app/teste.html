@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Drope</title>
+    <link rel="stylesheet" href="css/app.css"/>
+
+    <script type='text/javascript' src='https://www.google.com/jsapi'></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {'packages': ['geochart']});
+      google.setOnLoadCallback(drawMarkersMap);
+
+      function drawMarkersMap() {
+        var data = google.visualization.arrayToDataTable([
+            ['City',   'Population', 'Area'],
+            ['São Paulo - São Paulo',      1285.31, 10000000 ],
+            ['São José dos Campos - São Paulo',    181.76,     600000],
+            ['Guarulhos - São Paulo',     117.27,    1200000],
+            ['Taubaté - São Paulo',     130.17,     250000],
+            ['Resende - Rio de Janeiro',     158.9,   200000],
+            ['Rio de Janeiro - Rio de Janeiro',     243.60,     5000000]
+            ]);
+
+        var options = { region: 'BR',
+          displayMode: 'markers',
+          colorAxis: {colors: ['green', 'blue']}
+        };
+
+        var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      };
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script type='text/javascript'>
+
+      // Create an object containing LatLng, population.
+    var citymap = {
+      'sao paulo': { center: new google.maps.LatLng(-23.5489433, -46.6388182), 
+        population: 10000000 },
+      'sao josé dos campos': { center: new google.maps.LatLng(-23.1790801, -45.88724759999999),
+        population: 600000 },
+      'guarulhos': { center: new google.maps.LatLng(-23.4633503, -46.5333792),
+        population: 1200000 },
+      'taubaté': { center: new google.maps.LatLng(-23.0309385, -45.5483236),
+        population: 250000 },
+      'resende': { center: new google.maps.LatLng(-22.4626523, -44.4555528),
+        population: 200000 },
+      'rio de janeiro': { center: new google.maps.LatLng(-22.9035393, -43.2095869),
+        population: 5000000 }
+    };
+var cityCircle;
+
+function initialize() {
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode( { 'address': 'Sao Paulo, SP, Brazil' },
+        function(result, status) { alert(result[0].geometry.location) });
+
+  var mapOptions = {
+      zoom: 7,
+      center: new google.maps.LatLng(-23.5489433, -46.6388182),
+      mapTypeId: google.maps.MapTypeId.TERRAIN
+  };
+
+  var map = new google.maps.Map(document.getElementById("map_canvas"),
+      mapOptions);
+
+  for (var city in citymap) {
+    // Construct the circle for each value in citymap. We scale population by 20.
+    var populationOptions = {
+strokeColor: "#FF0000",
+             strokeOpacity: 0.8,
+             strokeWeight: 1,
+             fillColor: "#FF0000",
+             fillOpacity: 0.55,
+             map: map,
+             center: citymap[city].center,
+             radius: 2000 + Math.sqrt(citymap[city].population / 3.141592 * 20)
+    };
+    cityCircle = new google.maps.Circle(populationOptions);
+  }
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+</head>
+<body>
+
+  <div id="chart_div" style="width: 900px; height: 500px;"></div>
+
+  <br/>
+
+  <div id="map_canvas" style="width: 900px; height: 500px;"></div>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="lib/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+</html>
