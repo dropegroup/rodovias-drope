@@ -6,7 +6,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 		
-	<title>SistemaBR-Brasil Rodovias Federais - DRoPE</title>
+	<title>Rodovias Federais - DRoPE</title>
 	
   	<link rel="stylesheet" href="css/app.css"/>
   	
@@ -29,13 +29,6 @@
 
 <body>
 
-	<!-- 
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-	-->  
-
 	<!-- ********************************************************* -->
 		<div id="header-wrapper">
 			<div class="container">
@@ -43,7 +36,7 @@
 					<div class="12u">
 						
 						<header id="header">
-							<h1><a href="#" id="logo">DRoPE - Rodovias Federais</a></h1>
+							<h1><a href="index.html" id="logo">DRoPE &nbsp;&ndash;&nbsp; Rodovias Federais</a></h1>
 							<nav id="nav">
 								<a href="index.html" >Principal</a>
 								<a href="sobre.html" class="current-page-item">Sobre</a>
@@ -62,10 +55,10 @@
 						<section>
 							<h2>Links Úteis</h2>
 							<ul class="link-list">
-								<li><a href="http://dados.gov.br/dataset/acidentes-rodovias-federais">Página oficial do projeto em dados.gov.br</a></li>
-								<li><a href="javascript:alert('Quais serão os links a serem publicados?');">Repositório de Fontes (frontend)</a></li>
-								<li><a href="javascript:alert('Quais serão os links a serem publicados?');">Repositório de Fontes (backend)</a></li>
-								<li><a href="javascript:alert('Qual é o email mesmo?');">Contato com o grupo</a></li>
+								<li><a href="http://dados.gov.br/dataset/acidentes-rodovias-federais" target="_blank">Página oficial dos dados em dados.gov.br</a></li>
+								<li><a href="https://github.com/dropegroup/rodovias-drope" target="_blank">Repositório de Fontes (frontend)</a></li>
+								<li><a href="https://github.com/dropegroup/rodovias-servicos" target="_blank">Repositório de Fontes (backend)</a></li>
+								<li><a href="mailto:dropegroup@gmail.com">Contato com o grupo</a></li>
 															
 							</ul>
 						</section>
@@ -81,11 +74,12 @@
 					<div class="6u skel-cell-mainContent">
 						
 						<section class="middle-content">
-							<h2>Sistema BR-Brasil - Boletins de Ocorrências em Rodovias Federais</h2>
-							<p>O grupo escolheu mostrar as informações relacionadas às Ocorrências des formas úteis tanto para o Governo, como para o cidadão.</p>
-							<p>Basicamente, é possível obter do sistema uma indicação da concentração de ocorrências ao redor dos municípios e das rodovias federais.</p>
-							<p>Para utilizar o sistema, basta clicar nos links no topo da página, para ter acesso aos relatórios e mapas disponíveis.</p>
-							<p>Os dados utilizados em todo o sistema foram obtidos do site do próprio <a href="http://dados.gov.br/dataset/acidentes-rodovias-federais">concurso</a>.</p>
+              <h2>Ocorrências em Rodovias Federais</h2>
+							<p>O grupo escolheu mostrar as informações relacionadas às ocorrências de forma útil tanto para o Governo como para o cidadão.</p>
+							<p>Basicamente, é possível obter do sistema uma indicação da concentração de ocorrências ao redor dos municípios cortados por rodovias federais.</p>
+							<!-- <p>Para utilizar o sistema, basta clicar nos links no topo da página, para ter acesso aos relatórios e mapas disponíveis.</p> -->
+              <p>Os dados utilizados no sistema foram obtidos do site <a href="http://dados.gov.br/" target="_blank">Dados Abertos</a>, do Governo Federal. 
+                Mais especificamente do <a href="http://dados.gov.br/dataset/acidentes-rodovias-federais" target="_blank">Sistema BR-Brasil - Boletins de Ocorrências em Rodovias Federais</a>.</p>
 							<p><div ng-view></div>
 						</section>
 					
@@ -103,7 +97,7 @@
 								<li>
 									<img src="img/layout/ernesto.gif" alt="" class="left" />
 									<h4>Ernesto Nakamura</h4>
-									<p>Varius nibh. Suspendisse vitae magna eget et amet mollis justo facilisis amet quis.</p>
+                  <p>Especialista em desenvolvimento de softwares. Experiência em diversos segmentos (Governo, logística, educação).</p>
 								</li>
 								<li>
 									<img src="img/layout/paulo.gif" alt="" class="left" />
@@ -118,19 +112,6 @@
 							</ul>
 						</section>
 					
-						<!--
-						<section>
-							<h2>How about some links?</h2>
-							<ul class="link-list">
-								<li><a href="#">Quis accumsan lorem</a></li>
-								<li><a href="#">Sed neque nisi consequat</a></li>
-								<li><a href="#">Eget et amet consequat</a></li>
-								<li><a href="#">Dapibus sed mattis blandit</a></li>
-								<li><a href="#">Vitae magna sed dolore</a></li>
-							</ul>
-						</section>
-						-->
-
 					</div>
 				</div>
 			</div>
@@ -140,53 +121,6 @@
 			<div class="container">
 				<div class="row">
 					<div class="8u">
-						
-						<!--  
-						<section>
-							<h2>How about a truckload of links?</h2>
-							<div>
-								<div class="row">
-									<div class="3u">
-										<ul class="link-list">
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Suspendisse varius ipsum</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-										</ul>
-									</div>
-									<div class="3u">
-										<ul class="link-list">
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Vitae magna sed dolore</a></li>
-										</ul>
-									</div>
-									<div class="3u">
-										<ul class="link-list">
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Suspendisse varius ipsum</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-										</ul>
-									</div>
-									<div class="3u">
-										<ul class="link-list">
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Vitae magna sed dolore</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</section>
-						-->
-						
 					</div>
 					<div class="4u">
 
@@ -194,19 +128,6 @@
 						Trabalho desenvolvido sob a licença <a href="http://www.gnu.org/licenses/gpl.html">GPL</a>
 						</section>
 						
-						<!--  
-						<section>
-							<h2>Something of interest</h2>
-							<p>Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. 
-							Suspendisse eu varius nibh. Suspendisse vitae magna eget odio amet 
-							mollis justo facilisis quis. Sed sagittis mauris amet tellus gravida
-							lorem ipsum dolor sit amet consequat blandit.</p>
-							<footer class="controls">
-								<a href="#" class="button">Oh, please continue ....</a>
-							</footer>
-						</section>
-						-->
-
 					</div>
 				</div>
 				<div class="row">
@@ -222,16 +143,10 @@
 		</div>
 	<!-- ********************************************************* -->
 
-  <!--  
-  Angular seed app: v<span app-version></span>
-  -->
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  -->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="lib/angular/angular.js"></script>
+  <!-- <script src="lib/angular/angular.js"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>

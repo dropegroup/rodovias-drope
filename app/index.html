@@ -6,7 +6,7 @@
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
 		
-	<title>SistemaBR-Brasil Rodovias Federais - DRoPE</title>
+	<title>Rodovias Federais - DRoPE</title>
 	
   	<link rel="stylesheet" href="css/app.css"/>
   	
@@ -33,13 +33,6 @@
 
 <body>
 
-	<!-- 
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-	-->  
-
 	<!-- ********************************************************* -->
 		<div id="header-wrapper">
 			<div class="container">
@@ -47,7 +40,7 @@
 					<div class="12u">
 						
 						<header id="header">
-							<h1><a href="#" id="logo">DRoPE - Visão de Ocorrências nas Rodovias Federais</a></h1>
+							<h1><a href="#" id="logo">DRoPE &nbsp;&ndash;&nbsp; Visão de Ocorrências nas Rodovias Federais</a></h1>
 							<nav id="nav">
 								<a href="index.html" class="current-page-item">Principal</a>
 								<a href="sobre.html" >Sobre</a>
@@ -60,15 +53,29 @@
 		</div>
 		<div id="main">
 			<div class="container">
-				<div class="row main-row">
-					<div class="1u">
 
+        <div class="row main-row">
+          <div class="1u">&nbsp;</div>
+          <div class="11u">
+            <section class="right-content">
+            <p>O mapa abaixo mostra um ranking de ocorrências de acidentes nas rodovias federais. 
+              Permite filtrar os dados de acordo os estados (UF), ano e mês das ocorrências.
+              Os municípios com o maior número de ocorrências são representados por círculos maiores.
+              É possível interagir com o mapa, obtendo informações do número de ocorrências do município, clicando no círculo sobre o mesmo.
+              Também é possível mover o mapa e realizar um zoom. 
+            </p>
+            </section>
+          </div>
+        </div>
+
+				<div class="row main-row">
+
+					<div class="1u">
 						<section>
 							<h2>Filtros</h2>
 							<div>
 								<div class="row">
 									<div class="10u">
-									
 										<section>
                     <div ng-controller='ControllerControles'>
                       Estado:<br/>
@@ -91,28 +98,18 @@
 
                     </div>
 										</section>										
-									
 									</div>
 								</div>
 							</div>
 						</section>
-						
 					</div>
+
 					<div class="11u skel-cell-mainContent">
 
 						<section class="right-content">
-				
-							<p>O mapa abaixo mostra um ranking de ocorrências de acidentes nas rodovias federais. 
-							Permite filtrar os dados de acordo os estados (UF), ano e mês das ocorrências.
-							Os municípios com o maior número de ocorrências são representados por círculos maiores.
-							É possível interagir com o mapa, obtendo informações do número de ocorrências do município, clicando no círculo sobre o mesmo. Também é possível modever o mapa e realizar um zoom. 
-							</p>
-							
 							<div ng-controller='ControllerMapa'>
                 <div id="map_canvas" style="width: 810px; height: 600px;"></div>
 							</div>
-							
-							<br/>
 						</section>
 					
 					</div>
@@ -124,53 +121,6 @@
 			<div class="container">
 				<div class="row">
 					<div class="8u">
-						
-						<!--  
-						<section>
-							<h2>How about a truckload of links?</h2>
-							<div>
-								<div class="row">
-									<div class="3u">
-										<ul class="link-list">
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Suspendisse varius ipsum</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-										</ul>
-									</div>
-									<div class="3u">
-										<ul class="link-list">
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Vitae magna sed dolore</a></li>
-										</ul>
-									</div>
-									<div class="3u">
-										<ul class="link-list">
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Suspendisse varius ipsum</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-										</ul>
-									</div>
-									<div class="3u">
-										<ul class="link-list">
-											<li><a href="#">Quis accumsan lorem</a></li>
-											<li><a href="#">Sed neque nisi consequat</a></li>
-											<li><a href="#">Eget et amet consequat</a></li>
-											<li><a href="#">Dapibus sed mattis blandit</a></li>
-											<li><a href="#">Vitae magna sed dolore</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</section>
-						-->
-						
 					</div>
 					<div class="4u">
 
@@ -178,19 +128,6 @@
 						Trabalho desenvolvido sob a licença <a href="http://www.gnu.org/licenses/gpl.html">GPL</a>
 						</section>
 						
-						<!--  
-						<section>
-							<h2>Something of interest</h2>
-							<p>Duis neque nisi, dapibus sed mattis quis, rutrum accumsan sed. 
-							Suspendisse eu varius nibh. Suspendisse vitae magna eget odio amet 
-							mollis justo facilisis quis. Sed sagittis mauris amet tellus gravida
-							lorem ipsum dolor sit amet consequat blandit.</p>
-							<footer class="controls">
-								<a href="#" class="button">Oh, please continue ....</a>
-							</footer>
-						</section>
-						-->
-
 					</div>
 				</div>
 				<div class="row">
@@ -206,16 +143,10 @@
 		</div>
 	<!-- ********************************************************* -->
 
-  <!--  
-  Angular seed app: v<span app-version></span>
-  -->
-
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-  -->
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script src="lib/angular/angular.js"></script>
+  <!-- <script src="lib/angular/angular.js"></script> -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/services.js"></script>
   <script src="js/controllers.js"></script>
